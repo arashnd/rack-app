@@ -1,1 +1,17 @@
-<h2>Loan Calculator</h2>
+<h1>Loan Calculator</h1>
+
+<h2>Check Eligibilty for loan</h2>
+
+<div class="form">
+  <form class="" action="/check" method="post">
+    <% tags = %W(citizenship age monthly\sincome) %>
+    <% tags.each do |tag| %>
+      <div class="">
+        <label for="<%= "customer[#{tag}]" %>"> <%= tag.capitalize %> :</label><br>
+        <input type="text" name="<%= "customer[#{tag}]" %>" value=""><br>
+      </div>
+    <% end %>
+    <br>
+    <input type="submit" name="" value="Check Eligibilty">
+  </form>
+</div>
