@@ -1,4 +1,6 @@
 class Application
+  
+  CARS = { 1 => "Suzuki Mehran VX Euro I", 2 => "Suzuki Mehran VX Euro II", 3 => "Audi A6"}
 
   def call(env)
 
@@ -14,13 +16,13 @@ class Application
       customer = Customer.new(request.params["customer"])
 
       if customer.eligible?
-        response.redirect('/eligible')
+        response.redirect('/calculate')
       else
         @message = "You are not eligible"
         response.redirect('/')
       end
 
-    when request.get? && '/eligible'
+    when request.get? && '/calculate'
       response.write(erb :installment,binding)
     else
       error(response, "Not Found!", 404)
