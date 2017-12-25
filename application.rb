@@ -23,15 +23,16 @@ class Application
       end
 
     when request.get? && '/calculate'
+      puts request.referer.inspect
       response.write(erb :installment,binding)
     when request.post? && '/calculate'
-      puts request.params["installment"]
-      installment = Installment.new(request.params["installment"])
-      puts installment.calculate
+      @installment = Installment.new(request.params["installment"])
+      response.redirect('/result')
+    when request.get? && '/result'
+      response.write(erb :result, binding)
     else
       error(response, "Not Found!", 404)
     end
-
     response.finish
   end
 end
