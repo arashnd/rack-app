@@ -1,5 +1,7 @@
 <h1>Calculate Installment</h1>
 
+<h3>You are eligible</h3>
+
 <form class="" action="calculate" method="post">
   <div class="">
     <select class="" name="">
@@ -9,23 +11,23 @@
     </select>
   </div>
   <div class="">
-    <label for="cost">Total cost of Vehicle</label>
-    <input type="text" name="cost" value=""> PKR
+    <label for="installment[cost]">Total cost of Vehicle</label>
+    <input type="text" name="installment[cost]" value=""> PKR
   </div>
   <div class="">
-    <label for="downpay">Down Payment</label>
-    <input type="text" name="downpay" value=""> PKR
+    <label for="installment[downpayment]">Down Payment</label>
+    <input type="text" name="installment[downpayment]" value=""> PKR
   </div>
   <div class="">
     <span>No of Years: </span><br>
     <% 3.upto(5) do |i| %>
-      <input type="radio" name="years" value="<%= i %>">
-      <label for="years"><%= i.humanize.capitalize %></label><br>
+      <input type="radio" name="installment[period]" value="<%= i %>">
+      <label for="installment[period]"><%= i.humanize.capitalize %></label><br>
     <% end %>
   </div>
   <div class="">
-    <label for="markup">Markup Rate</label>
-    <input type="text" name="markup" value=""> %
+    <label for="installment[markup]">Markup Rate</label>
+    <input type="text" name="installment[markup]" value=""> %
   </div>
   <div class="">
     <input type="submit" name="" value="Calculate">
