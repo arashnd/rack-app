@@ -1,14 +1,27 @@
 <h1>Loan Calculator</h1>
 
+<% if @message %>
+  <h3 class="error"><%= @message %></h3>
+<% end %>
+
 <h2>Check Eligibilty for loan</h2>
 
 <div class="form">
   <form class="" action="/check" method="post">
-    <% tags = %W(citizenship age monthly\sincome) %>
-    <% tags.each do |tag| %>
+    <input type="radio" name="customer[status]" value="salaried">
+    <label for="customer[status]">Salaried Person</label>
+    <input type="radio" name="customer[status]" value="business">
+    <label for="customer[status]">Business Person</label><br>
+    <label for="customer[nationality]">Nationality :</label>
+    <select class="" name="customer[nationality]">
+      <option value="pakistani">Pakistani</option>
+      <option value="other">Other</option>
+    </select>
+    <% inputs = %W(age monthly\sincome) %>
+    <% inputs.each do |input| %>
       <div class="">
-        <label for="<%= "customer[#{tag}]" %>"> <%= tag.capitalize %> :</label><br>
-        <input type="text" name="<%= "customer[#{tag}]" %>" value=""><br>
+        <label for="<%= "customer[#{input}]" %>"> <%= input.capitalize %> :</label><br>
+        <input type="text" name="<%= "customer[#{input.split(' ').last}]" %>" value=""><br>
       </div>
     <% end %>
     <br>
