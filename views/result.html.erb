@@ -1,1 +1,4 @@
-<h1>Monthly Installment will be <%= @installment.calculate %></h1>
+<section>
+  <h1>Monthly Installment will be <%= @installment.calculate %></h1>
+  <h2><%= @installment.calculate.to_i.humanize %></h2>
+</section>

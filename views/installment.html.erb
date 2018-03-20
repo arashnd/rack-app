@@ -1,35 +1,39 @@
-<h1>Calculate Installment</h1>
+<h3 class="flash-msg success">You are eligible</h3>
 
-<h3>You are eligible</h3>
+<section>
+  <h2>Calculate Installment</h2>
 
-<form class="" action="calculate" method="post">
-  <div class="">
-    <select class="" name="">
-      <% CARS.each_pair do |key, value| %>
-        <option value="<%= key %>"><%= value %></option>
+  <form class="" action="calculate" method="post">
+    <div class="form-group">
+      <label for="">Vehicle :</label><br>
+      <select class="" name="">
+        <% CARS.each_pair do |key, value| %>
+          <option value="<%= key %>"><%= value %></option>
+        <% end %>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="installment[cost]">Total cost of vehicle</label><br>
+      <input type="text" name="installment[cost]" value="" placeholder="PKR">
+    </div>
+    <div class="form-group">
+      <label for="installment[downpayment]">Down payment</label><br>
+      <input type="text" name="installment[downpayment]" value="" placeholder="PKR">
+    </div>
+    <div class="form-group">
+      <span>No of years: </span><br>
+      <% 3.upto(5) do |i| %>
+        <input type="radio" name="installment[period]" value="<%= i %>">
+        <label for="installment[period]"><%= i.humanize.capitalize %></label><br>
       <% end %>
-    </select>
-  </div>
-  <div class="">
-    <label for="installment[cost]">Total cost of Vehicle</label>
-    <input type="text" name="installment[cost]" value=""> PKR
-  </div>
-  <div class="">
-    <label for="installment[downpayment]">Down Payment</label>
-    <input type="text" name="installment[downpayment]" value=""> PKR
-  </div>
-  <div class="">
-    <span>No of Years: </span><br>
-    <% 3.upto(5) do |i| %>
-      <input type="radio" name="installment[period]" value="<%= i %>">
-      <label for="installment[period]"><%= i.humanize.capitalize %></label><br>
-    <% end %>
-  </div>
-  <div class="">
-    <label for="installment[markup]">Markup Rate</label>
-    <input type="text" name="installment[markup]" value=""> %
-  </div>
-  <div class="">
-    <input type="submit" name="" value="Calculate">
-  </div>
-</form>
+    </div>
+    <div class="">
+      <label for="installment[markup]">Markup rate</label><br>
+      <input type="text" name="installment[markup]" value="" placeholder=" % ">
+    </div>
+    <div class="form-group">
+      <input type="submit" name="" value="Calculate">
+    </div>
+  </form>
+
+</section>

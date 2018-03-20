@@ -1,0 +1,60 @@
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+header {
+  background-color: #3c9bff;
+  padding-left: 20%;
+}
+
+.flash-msg {
+  margin: 0;
+  line-height: 50px;
+  font-weight: 400;
+  padding-left: 20%;
+}
+.error {
+  color: #ff5d5d;
+}
+.success {
+  color: #0bab0b;
+}
+header h1 {
+  margin-top: 0;
+  margin-bottom: 0;
+  line-height: 80px;
+  color: #fff;
+  font-weight: 500;
+}
+
+section {
+  padding-left: 20%;
+
+}
+h2 {
+  margin-top: 0;
+  font-weight: 300;
+  line-height: 100px;
+}
+
+.form-group{
+  margin-top: 10px;
+}
+
+input{
+  padding: 5px;
+
+}
+
+input[type="text"]{
+    width: 300px;
+}
+select{
+  padding: 4px;
+}
+input[type="submit"]{
+  width: 150px;
+  font-weight: 400;
+  margin-top: 10px;
+}
