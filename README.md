@@ -8,11 +8,11 @@ bundle exec rackup
 
 Suppose ABC bank is offering Car Loan to its customers. As a software developer, you have to develop an application for this bank which will facilitate the bankers and its customers for effective calculations regarding car loan plans and installments with reference to number of years. For your guidance, bank has provided you the following eligibility criteria for car loans.
 
-| Requirements | Salaried Individuals | Business Persons |
-| -------------|:-------------:-------| -----:----|
-| **Citizenship**  | Pakistani     | Pakistani |
-| **Age**          | 22-60 years      |   22-70 years |
-| **Minimum monthly income** | Rs. 50,000      |    Rs. 75,000 |
+| Requirements               | Salaried Individuals | Business Persons |
+|----------------------------|----------------------|------------------|
+| **Citizenship**            | Pakistani            | Pakistani        |
+| **Age**                    | 22-60yr              | 22-70yr          |
+| **Minimum monthly income** | Rs.50,000            | Rs.75,000        |
 
 ###### Table: Eligibility Criteria for Car Loan
 ###### Task 1:

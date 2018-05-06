@@ -1,6 +1,6 @@
-require './lib/helpers'
-require './models/customer'
-require './models/installment'
+require_relative 'lib/helpers'
+require_relative 'models/customer'
+require_relative 'models/installment'
 require_relative 'application'
 require 'humanize'
 
