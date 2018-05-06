@@ -13,7 +13,6 @@ Suppose ABC bank is offering Car Loan to its customers. As a software developer,
 | **Citizenship**            | Pakistani            | Pakistani        |
 | **Age**                    | 22-60yr              | 22-70yr          |
 | **Minimum monthly income** | Rs.50,000            | Rs.75,000        |
-
 ###### Table: Eligibility Criteria for Car Loan
 ###### Task 1:
 
